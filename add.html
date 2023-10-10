@@ -12,7 +12,7 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Hugo 0.118.2" />
-    <title>view</title>
+    <title>add</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -300,14 +300,21 @@
     <main>
       <section class="py-5 text-center container">
         <div class="row py-lg-5">
-          <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">SREBF1/2</h1>
-            <p class="lead text-body-secondary">
-              Sterol regulatory element-binding protein 1/2
-            </p>
+          <div class="col-lg-4 col-md-8 mx-auto">
+            <input
+              type="text"
+              class="form-control form-control-lg mb-3"
+              id="TF_name"
+              placeholder="TF name"
+            />
+            <input
+              type="text"
+              class="form-control form-control-sm mb-3"
+              id="TF_fullname"
+              placeholder="TF full name"
+            />
             <p>
-              <a href="#" class="btn btn-outline-dark">Edit</a>
-              <a href="#" class="btn btn-outline-dark">Delete</a>
+              <a href="#" class="btn btn-outline-dark">Add</a>
             </p>
           </div>
         </div>
@@ -323,42 +330,32 @@
                   <div
                     class="d-flex justify-content-between align-items-center mb-3"
                   >
-                    <small class="text-body-secondary mb-3"
-                      >SREBF1/2 is an activator that regulates transcription of:
-                      <br />
-                      - cholesterol biosynthetic pathway genes (HMG CoA
-                      reductase, HMG CoA synthase, farnesyl diphosphate
-                      synthase, squalene synthase), <br />
-                      - cholesterol uptake gene (LDL receptor), and <br />
-                      - fatty acid synthesis and uptake pathway genes (acetyl
-                      CoA carboxylase, fatty acid synthase, stearoyl CoA
-                      desaturase-1, and lipoprotein lipase)
-                    </small>
+                    <textarea
+                      class="form-control"
+                      id="general_info"
+                      rows="3"
+                    ></textarea>
                   </div>
                   <p class="card-text">Feedback regulation</p>
                   <div
                     class="d-flex justify-content-between align-items-center mb-3"
                   >
-                    <small class="text-body-secondary mb-3"
-                      >When intracellular sterol is low, SREBF is cleaved from
-                      ER and nuclear membranes and migrate into the nucleus to
-                      bind to the promoter of LDLR. <br />
-                      The cell takes up LDL via LDLR, and degrades it into
-                      phospholipids, triglycerides, and cholesterol. <br />
-                      When cholesterol levels increase, SREBF is no longer
-                      cleaved.
-                    </small>
+                    <textarea
+                      class="form-control"
+                      id="feedback_regulation"
+                      rows="3"
+                    ></textarea>
                   </div>
                   <p class="card-text">References</p>
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
-                    <small class="text-body-secondary">
-                      1. Brown, M. S., & Goldstein, J. L. (1997). The SREBP
-                      pathway: regulation of cholesterol metabolism by
-                      proteolysis of a membrane-bound transcription factor.
-                      Cell, 89(3), 331–340.
-                      https://doi.org/10.1016/s0092-8674(00)80213-5
+                    <small class="text-body-secondary"></small>
+                      <textarea
+                        class="form-control"
+                        id="references"
+                        rows="3"
+                      ></textarea>
                     </small>
                   </div>
                 </div>

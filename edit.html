@@ -12,14 +12,13 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Hugo 0.118.2" />
-    <title>index</title>
+    <title>add</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="my.css" />
 
     <link
       rel="canonical"
@@ -302,12 +301,27 @@
       <section class="py-5 text-center container">
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">TFs that bind to pLDLR</h1>
-            <p class="lead text-body-secondary">
-              A list of transcription factors that bind to the LDLR promoter
-            </p>
+            <input
+              type="text"
+              class="form-control form-control-lg mb-3"
+              id="TF_name"
+              placeholder="TF name"
+              value="SREBF1/2"
+            />
+            <input
+              type="text"
+              class="form-control form-control-sm mb-3"
+              id="TF_fullname"
+              placeholder="TF full name"
+              value="Sterol regulatory element-binding protein 1/2"
+            />
             <p>
-              <a href="add.html" class="btn btn-outline-dark">Add a TF</a>
+              <a
+                href="view.html"
+                onclick="edit_confirm()"
+                class="btn btn-outline-dark"
+                >Edit</a
+              >
             </p>
           </div>
         </div>
@@ -315,122 +329,53 @@
 
       <div class="album py-5 bg-body-tertiary">
         <div class="container">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-              <a href="view.html" class="card-link">
-                <div class="card shadow-sm">
-                  <img
-                    src="images/SREBF1.svg"
-                    alt="SREBF1/2 motif"
-                    class="bd-placeholder-img card-img-top"
-                    width="100%"
-                    height="225"
-                  />
-
-                  <div class="card-body">
-                    <p class="card-text">SREBF1/2</p>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
+          <div class="row g-3">
+            <div class="col-12">
+              <div class="card shadow-sm mx-auto">
+                <div class="card-body">
+                  <p class="card-text">General Information</p>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <textarea
+                      class="form-control form-control-sm"
+                      id="general_info"
+                      rows="4"
                     >
-                      <small class="text-body-secondary"
-                        >Sterol regulatory element-binding protein 1/2</small
-                      >
-                    </div>
+SREBF1/2 is an activator that regulates transcription of:
+- cholesterol biosynthetic pathway genes (HMG CoA reductase, HMG CoA synthase, farnesyl diphosphate synthase, squalene synthase),
+- cholesterol uptake gene (LDL receptor), and
+- fatty acid synthesis and uptake pathway genes (acetyl CoA carboxylase, fatty acid synthase, stearoyl CoA desaturase-1, and lipoprotein lipase)</textarea
+                    >
+                  </div>
+                  <p class="card-text">Feedback regulation</p>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <textarea
+                      class="form-control form-control-sm"
+                      id="references"
+                      rows="4"
+                    >
+When intracellular sterol is low, SREBF is cleaved from ER and nuclear membranes and migrate into the nucleus to bind to the promoter of LDLR.
+The cell takes up LDL via LDLR, and degrades it into phospholipids, triglycerides, and cholesterol.
+When cholesterol levels increase, SREBF is no longer cleaved.</textarea
+                    >
+                  </div>
+                  <p class="card-text">References</p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <textarea
+                      class="form-control form-control-sm"
+                      id="references"
+                      rows="4"
+                    >
+1. Brown, M. S., & Goldstein, J. L. (1997). The SREBP pathway: regulation of cholesterol metabolism by proteolysis of a membrane-bound transcription factor. Cell, 89(3), 331–340. https://doi.org/10.1016/s0092-8674(00)80213-5</textarea
+                    >
                   </div>
                 </div>
-              </a>
-            </div>
-            <div class="col">
-              <a href="view.html" class="card-link">
-                <div class="card shadow-sm">
-                  <img
-                    src="images/SP1.svg"
-                    alt="SP1 motif"
-                    class="bd-placeholder-img card-img-top"
-                    width="100%"
-                    height="225"
-                  />
-                  <div class="card-body">
-                    <p class="card-text">SP1</p>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <small class="text-body-secondary"
-                        >Specificity protein 1</small
-                      >
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col">
-              <a href="view.html" class="card-link">
-                <div class="card shadow-sm">
-                  <img
-                    src="images/CREB1.svg"
-                    alt="CREB1 motif"
-                    class="bd-placeholder-img card-img-top"
-                    width="100%"
-                    height="225"
-                  />
-                  <div class="card-body">
-                    <p class="card-text">CREB1</p>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <small class="text-body-secondary"
-                        >cAMP response element-binding protein 1</small
-                      >
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col">
-              <a href="view.html" class="card-link">
-                <div class="card shadow-sm">
-                  <img
-                    src="images/ZNF652.svg"
-                    alt="ZNF652 motif"
-                    class="bd-placeholder-img card-img-top"
-                    width="100%"
-                    height="225"
-                  />
-                  <div class="card-body">
-                    <p class="card-text">ZNF652</p>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <small class="text-body-secondary"
-                        >Zinc finger protein 652</small
-                      >
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col">
-              <a href="view.html" class="card-link">
-                <div class="card shadow-sm">
-                  <img
-                    src="images/THRB.svg"
-                    alt="THRB motif"
-                    class="bd-placeholder-img card-img-top"
-                    width="100%"
-                    height="225"
-                  />
-                  <div class="card-body">
-                    <p class="card-text">THRB</p>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <small class="text-body-secondary"
-                        >Thyroid hormone receptor beta</small
-                      >
-                    </div>
-                  </div>
-                </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>
@@ -460,5 +405,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="my.js"></script>
   </body>
 </html>

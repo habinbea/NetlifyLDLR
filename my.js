@@ -7,11 +7,7 @@ function edit_confirm() {
 }
 
 function delete_confirm() {
-  if (validateForm()) {
-    alert("Are you sure you want to delete this TF?");
-  } else {
-    alert("Required: TF name");
-  }
+  alert("Are you sure you want to delete this TF?");
 }
 function add_confirm() {
   if (validateForm()) {
